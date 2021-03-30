@@ -22,7 +22,8 @@ RUN \
 	php7-curl \
 	php7-phar \
 	py3-pip \
-	python3 && \
+	python3 \
+        sshfs && \
  echo "**** install diskover ****" && \
  mkdir -p /app/diskover && \
  if [ -z ${DISKOVER_VERSION+x} ]; then \
