@@ -17,3 +17,4 @@ mkdir -p /scan/"${HOSTONLY}"
 sshfs -o ro,allow_other -o StrictHostKeyChecking=no "${HOST}:${REMOTE_PATH}" /scan/"${HOSTONLY}"
 echo "Starting scan"
 /app/diskover/diskover.py -d /scan/"${HOSTONLY}" -i diskover-"${HOSTONLY}" -F
+umount /scan/"${HOSTONLY}"
